@@ -14,7 +14,7 @@ resource "github_repository" "WebApp" {
 }
 */
 
-resource "github_repository" "ApiGateway" {
+resource "github_repository" "repository_api_gateway" {
   name               = "ApiGateway"
   description        = "Microservice for aggregating requests to storage services"
   has_issues         = true
@@ -39,7 +39,7 @@ resource "github_repository" "ConferenceService" {
 }
 */
 
-resource "github_repository" "SessionService" {
+resource "github_repository" "repository_session_service" {
   name               = "SessionService"
   description        = "Microservice for storing conference sessions"
   has_issues         = true
@@ -50,7 +50,7 @@ resource "github_repository" "SessionService" {
   license_template   = "mit"
 }
 
-resource "github_repository" "ConferenceSessionService" {
+resource "github_repository" "repository_conference_session_service" {
   name               = "ConferenceSessionService"
   description        = "Microservice for storing the relationship between conferences and sessions"
   has_issues         = true
@@ -61,7 +61,7 @@ resource "github_repository" "ConferenceSessionService" {
   license_template   = "mit"
 }
 
-resource "github_repository" "FeedService" {
+resource "github_repository" "repository_feed_service" {
   name               = "FeedService"
   description        = "Microservice for storing conference feeds"
   has_issues         = true
