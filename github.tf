@@ -2,6 +2,17 @@ provider "github" {
   version = "=2.2"
 }
 
+resource "github_repository" "repository_k8s_config" {
+  name               = "KubeConfig"
+  description        = "Repository containing the kubernetes resource files for the NextGenConf cluster"
+  has_issues         = true
+  has_projects       = false
+  allow_merge_commit = false
+  allow_squash_merge = true
+  allow_rebase_merge = false
+  license_template   = "mit"
+}
+
 resource "github_repository" "repository_conference_service" {
   name               = "ConferenceService"
   description        = "Microservice for storing conferences"
