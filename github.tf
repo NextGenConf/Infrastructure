@@ -1,8 +1,18 @@
-provider "github" {}
+provider "github" {
+  version = "2.2"
+}
 
-# Commented out pending import as the repo already exists.
-/*
-resource "github_repository" "WebApp" {
+resource "github_repository" "repository_conference_service" {
+  name               = "ConferenceService"
+  description        = "Microservice for storing conferences"
+  has_issues         = true
+  has_projects       = false
+  allow_merge_commit = false
+  allow_squash_merge = true
+  allow_rebase_merge = false
+}
+
+resource "github_repository" "repository_web_app" {
   name               = "WebApp"
   description        = "React app displaying conferences"
   has_issues         = true
@@ -10,9 +20,7 @@ resource "github_repository" "WebApp" {
   allow_merge_commit = false
   allow_squash_merge = true
   allow_rebase_merge = false
-  license_template   = "mit"
 }
-*/
 
 resource "github_repository" "repository_api_gateway" {
   name               = "ApiGateway"
@@ -24,20 +32,6 @@ resource "github_repository" "repository_api_gateway" {
   allow_rebase_merge = false
   license_template   = "mit"
 }
-
-# Commented out pending import as the repo already exists.
-/*
-resource "github_repository" "ConferenceService" {
-  name               = "ConferenceService"
-  description        = "Microservice for storing conferences"
-  has_issues         = true
-  has_projects       = false
-  allow_merge_commit = false
-  allow_squash_merge = true
-  allow_rebase_merge = false
-  license_template   = "mit"
-}
-*/
 
 resource "github_repository" "repository_session_service" {
   name               = "SessionService"
