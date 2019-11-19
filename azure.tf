@@ -4,7 +4,6 @@ provider "azurerm" {
   version = "=1.36.1"
 }
 
-
 resource "azurerm_resource_group" "ngc" {
   name     = "ngc"
   location = "North Europe"
