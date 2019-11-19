@@ -16,7 +16,7 @@ resource "github_branch_protection" "branch_protection_api_gateway" {
 }
 
 resource "github_branch_protection" "branch_protection_session_service" {
-  repository     = "SessionService"
+  repository     = github_repository.repository_session_service.name
   branch         = "master"
   enforce_admins = true
 
@@ -33,7 +33,7 @@ resource "github_branch_protection" "branch_protection_session_service" {
 }
 
 resource "github_branch_protection" "branch_protection_conference_session_service" {
-  repository     = "ConferenceSessionService"
+  repository     = github_repository.repository_conference_session_service.name
   branch         = "master"
   enforce_admins = true
 
@@ -50,7 +50,7 @@ resource "github_branch_protection" "branch_protection_conference_session_servic
 }
 
 resource "github_branch_protection" "branch_protection_feed_service" {
-  repository     = "FeedService"
+  repository     = github_repository.repository_feed_service.name
   branch         = "master"
   enforce_admins = true
 
