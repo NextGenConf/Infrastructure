@@ -8,7 +8,6 @@ resource "github_repository" "repository_conference_service" {
   allow_merge_commit = false
   allow_squash_merge = true
   allow_rebase_merge = false
-  license_template   = "mit"
 }
 
 resource "github_repository" "repository_web_app" {
@@ -19,7 +18,6 @@ resource "github_repository" "repository_web_app" {
   allow_merge_commit = false
   allow_squash_merge = true
   allow_rebase_merge = false
-  license_template   = "mit"
 }
 
 resource "github_repository" "repository_api_gateway" {
