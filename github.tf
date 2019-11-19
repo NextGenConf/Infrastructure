@@ -2,6 +2,7 @@ provider "github" {
   version = "2.2"
 }
 
+
 resource "github_repository" "repository_conference_service" {
   name               = "ConferenceService"
   description        = "Microservice for storing conferences"
