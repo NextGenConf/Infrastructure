@@ -1,5 +1,5 @@
 provider "github" {
-  version = "2.2"
+  version = "=2.2"
 }
 
 resource "github_repository" "repository_conference_service" {
