@@ -1,8 +1,8 @@
 provider "github" {}
 
 resource "github_repository" "repository_conference_service" {
-  name               = "WebApp"
-  description        = "React app displaying conferences"
+  name               = "ConferenceService"
+  description        = "Microservice for storing conferences"
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
@@ -12,8 +12,8 @@ resource "github_repository" "repository_conference_service" {
 }
 
 resource "github_repository" "repository_web_app" {
-  name               = "ConferenceService"
-  description        = "Microservice for storing conferences"
+  name               = "WebApp"
+  description        = "React app displaying conferences"
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
