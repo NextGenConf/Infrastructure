@@ -1,5 +1,5 @@
 resource "github_branch_protection" "branch_protection_api_gateway" {
-  repository     = "ApiGateway"
+  repository     = github_repository.repository_api_gateway.name
   branch         = "master"
   enforce_admins = true
 
