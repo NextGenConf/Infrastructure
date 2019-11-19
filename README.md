@@ -11,6 +11,7 @@ In order to create and apply Terraform plans, the terraform tool needs
 to be authorized to access the [backend](https://www.terraform.io/docs/backends/index.html).
 Next Gen Conf uses the [azurerm](https://www.terraform.io/docs/backends/types/azurerm.html)
 backend to store it's state and authenticates using a _Service Principal_.
+The backend state is found [here](https://ms.portal.azure.com/#blade/Microsoft_Azure_Storage/ContainerMenuBlade/overview/storageAccountId/%2Fsubscriptions%2Fb087ec80-bbdd-4b0a-9fb3-ca2eb729208c%2FresourceGroups%2Fterraform%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Fngcterraform/path/ngc-tfstate/etag/%220x8D76CA0A35AB936%22).
 Authenticating to the azurerm backend as a Service Principal requires several variables:
 
 - `client_id`: The Client ID of the Service Principal.
