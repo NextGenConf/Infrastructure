@@ -45,7 +45,7 @@ resource "azurerm_cosmosdb_account" "ngc" {
   location            = azurerm_resource_group.ngc.location
   resource_group_name = azurerm_resource_group.ngc.name
   offer_type          = "Standard"
-  kind                = "GlobalDocumentDB"
+  kind                = "MongoDB"
 
   consistency_policy {
     consistency_level       = "BoundedStaleness"
@@ -54,7 +54,7 @@ resource "azurerm_cosmosdb_account" "ngc" {
   }
 
   capabilities {
-    name = ["MongoDBv3.4"]
+    name = "MongoDBv3.4"
   }
 
   geo_location {
