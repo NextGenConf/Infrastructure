@@ -8,7 +8,6 @@ resource "github_repository" "repository_k8s_config" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
   license_template   = "mit"
 }
@@ -19,7 +18,6 @@ resource "github_repository" "repository_conference_service" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
 }
 
@@ -29,7 +27,6 @@ resource "github_repository" "repository_web_app" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
 }
 
@@ -39,7 +36,6 @@ resource "github_repository" "repository_api_gateway" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
   license_template   = "mit"
 }
@@ -50,7 +46,6 @@ resource "github_repository" "repository_session_service" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
   license_template   = "mit"
 }
@@ -61,7 +56,6 @@ resource "github_repository" "repository_conference_session_service" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
   license_template   = "mit"
 }
@@ -72,7 +66,6 @@ resource "github_repository" "repository_feed_service" {
   has_issues         = true
   has_projects       = false
   allow_merge_commit = false
-  allow_squash_merge = true
   allow_rebase_merge = false
   license_template   = "mit"
 }
