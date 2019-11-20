@@ -53,6 +53,10 @@ resource "azurerm_cosmosdb_account" "ngc" {
     max_staleness_prefix    = 200
   }
 
+  capabilities {
+    name = MongoDBv3.4
+  }
+
   geo_location {
     location          = "North Europe"
     failover_priority = 0
