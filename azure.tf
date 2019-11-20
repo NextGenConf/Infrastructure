@@ -39,3 +39,38 @@ resource "azurerm_kubernetes_cluster" "ngc" {
     client_secret = var.cluster_client_secret
   }
 }
+
+resource "azurerm_cosmosdb_account" "ngc" {
+  name                = "nextgenconf"
+  location            = azurerm_resource_group.ngc.location
+  resource_group_name = azurerm_resource_group.ngc.name
+  offer_type          = "Standard"
+  kind                = "GlobalDocumentDB"
+
+  consistency_policy {
+    consistency_level       = "BoundedStaleness"
+    max_interval_in_seconds = 10
+    max_staleness_prefix    = 200
+  }
+
+  geo_location {
+    location          = "West Europe"
+    failover_priority = 1
+  }
+}
+
+resource "azurerm_cosmosdb_mongo_database" "ngc_sessions" {
+  name                = "SessionsDb"
+  resource_group_name = azurerm_resource_group.ngc.name
+  account_name        = azurerm_cosmosdb_account.ngc.name
+}
+
+resource "azurerm_cosmosdb_mongo_collection" "ngc" {
+  name                = "Sessions"
+  resource_group_name = azurerm_resource_group.ngc.name
+  account_name        = azurerm_cosmosdb_account.ngc.name
+  database_name       = azurerm_cosmosdb_mongo_database.ngc_sessions.name
+
+  default_ttl_seconds = "-1"
+  shard_key           = "_id"
+}
