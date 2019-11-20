@@ -69,7 +69,7 @@ resource "azurerm_cosmosdb_mongo_collection" "ngc" {
   name                = "Sessions"
   resource_group_name = azurerm_resource_group.ngc.name
   account_name        = azurerm_cosmosdb_account.ngc.name
-  database_name       = azurerm_cosmosdb_mongo_database.ngc.name
+  database_name       = azurerm_cosmosdb_mongo_database.ngc_sessions.name
 
   default_ttl_seconds = "-1"
   shard_key           = "_id"
