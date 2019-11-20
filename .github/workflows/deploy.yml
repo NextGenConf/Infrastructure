@@ -17,6 +17,8 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.TF_GITHUB_TOKEN }}
       GITHUB_ORGANIZATION: NextGenConf
 
+      TF_VAR_cluster_client_secret: ${{ secrets.NGC_CLUSTER_CLIENT_SECRET }}
+
     steps:
     - uses: actions/checkout@v1
     - name: terraform init
