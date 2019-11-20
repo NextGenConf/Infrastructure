@@ -54,7 +54,7 @@ resource "azurerm_cosmosdb_account" "ngc" {
   }
 
   capabilities {
-    name = MongoDBv3.4
+    name = "MongoDBv3.4"
   }
 
   geo_location {
