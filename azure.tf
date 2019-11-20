@@ -64,7 +64,7 @@ resource "azurerm_cosmosdb_account" "ngc" {
   }
 }
 
-resource "azurerm_cosmosdb_sessions_mongo_database" "ngc" {
+resource "azurerm_cosmosdb_mongo_database" "ngc_sessions" {
   name                = "SessionsDb"
   resource_group_name = azurerm_resource_group.ngc.name
   account_name        = azurerm_cosmosdb_account.ngc.name
