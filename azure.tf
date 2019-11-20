@@ -4,11 +4,6 @@ provider "azurerm" {
   version = "=1.36.1"
 }
 
-data "azurerm_location" "ngc" {
-  primary_location   = "North Europe"
-  secondary_location = "West Europe"
-}
-
 resource "azurerm_resource_group" "ngc" {
   name     = "ngc"
   location = "North Europe"
@@ -59,7 +54,7 @@ resource "azurerm_cosmosdb_account" "ngc" {
   }
 
   geo_location {
-    location          = data.azurerm_location.ngc.secondary_location
+    location          = "West Europe"
     failover_priority = 1
   }
 }
