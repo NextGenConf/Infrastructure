@@ -5,7 +5,7 @@ provider "azurerm" {
 }
 
 data "azurerm_location" "ngc" {
-  primary_location = "North Europe"
+  primary_location   = "North Europe"
   secondary_location = "West Europe"
 }
 
