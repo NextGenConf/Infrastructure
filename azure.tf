@@ -94,3 +94,19 @@ resource "azurerm_cosmosdb_mongo_collection" "ngc_conference" {
   default_ttl_seconds = "-1"
   shard_key           = "_id"
 }
+
+resource "azurerm_cosmosdb_mongo_database" "ngc_profile" {
+  name                = "ProfileDb"
+  resource_group_name = azurerm_resource_group.ngc.name
+  account_name        = azurerm_cosmosdb_account.ngc.name
+}
+
+resource "azurerm_cosmosdb_mongo_collection" "ngc_profile" {
+  name                = "Profiles"
+  resource_group_name = azurerm_resource_group.ngc.name
+  account_name        = azurerm_cosmosdb_account.ngc.name
+  database_name       = azurerm_cosmosdb_mongo_database.ngc_conference.name
+
+  default_ttl_seconds = "-1"
+  shard_key           = "_id"
+}
