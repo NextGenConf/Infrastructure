@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "ngc" {
 resource "azurerm_container_registry" "ngc" {
   name                = "NextGenConf"
   sku                 = "Standard"
-  admin_enabled       = false
+  admin_enabled       = true
   resource_group_name = azurerm_resource_group.ngc.name
   location            = azurerm_resource_group.ngc.location
 }
