@@ -7,9 +7,6 @@ resource "github_repository" "repository_k8s_config" {
   description        = "Repository containing the kubernetes resource files for the NextGenConf cluster"
   has_issues         = true
   has_projects       = false
-  allow_merge_commit = false
-  allow_rebase_merge = false
-  license_template   = "mit"
 }
 
 resource "github_repository" "repository_conference_service" {
@@ -17,8 +14,6 @@ resource "github_repository" "repository_conference_service" {
   description        = "Microservice for storing conferences"
   has_issues         = true
   has_projects       = false
-  allow_merge_commit = false
-  allow_rebase_merge = false
 }
 
 resource "github_repository" "repository_web_app" {
@@ -26,8 +21,6 @@ resource "github_repository" "repository_web_app" {
   description        = "React app displaying conferences"
   has_issues         = true
   has_projects       = false
-  allow_merge_commit = false
-  allow_rebase_merge = false
 }
 
 resource "github_repository" "repository_api_gateway" {
@@ -35,9 +28,6 @@ resource "github_repository" "repository_api_gateway" {
   description        = "Microservice for aggregating requests to storage services"
   has_issues         = true
   has_projects       = false
-  allow_merge_commit = false
-  allow_rebase_merge = false
-  license_template   = "mit"
 }
 
 resource "github_repository" "repository_session_service" {
@@ -45,9 +35,6 @@ resource "github_repository" "repository_session_service" {
   description        = "Microservice for storing conference sessions"
   has_issues         = true
   has_projects       = false
-  allow_merge_commit = false
-  allow_rebase_merge = false
-  license_template   = "mit"
 }
 
 resource "github_repository" "repository_conference_session_service" {
@@ -55,9 +42,6 @@ resource "github_repository" "repository_conference_session_service" {
   description        = "Microservice for storing the relationship between conferences and sessions"
   has_issues         = true
   has_projects       = false
-  allow_merge_commit = false
-  allow_rebase_merge = false
-  license_template   = "mit"
 }
 
 resource "github_repository" "repository_feed_service" {
