@@ -13,8 +13,6 @@ jobs:
       ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
       ARM_SUBSCRIPTION_ID: b087ec80-bbdd-4b0a-9fb3-ca2eb729208c
       ARM_TENANT_ID: 72f988bf-86f1-41af-91ab-2d7cd011db47
-      GITHUB_TOKEN: ${{ secrets.TF_GITHUB_TOKEN }}
-      GITHUB_ORGANIZATION: NextGenConf
 
       TF_VAR_cluster_client_secret: ${{ secrets.NGC_CLUSTER_CLIENT_SECRET }}
 
