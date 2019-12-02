@@ -75,7 +75,7 @@ resource "azurerm_cosmosdb_mongo_collection" "ngc" {
   account_name        = azurerm_cosmosdb_account.ngc.name
   database_name       = azurerm_cosmosdb_mongo_database.ngc_sessions.name
 
-  default_ttl_seconds = "-1"
+  default_ttl_seconds = "0"
   shard_key           = "_id"
 }
 
@@ -91,7 +91,7 @@ resource "azurerm_cosmosdb_mongo_collection" "ngc_conference" {
   account_name        = azurerm_cosmosdb_account.ngc.name
   database_name       = azurerm_cosmosdb_mongo_database.ngc_conference.name
 
-  default_ttl_seconds = "-1"
+  default_ttl_seconds = "0"
   shard_key           = "_id"
 }
 
@@ -107,6 +107,6 @@ resource "azurerm_cosmosdb_mongo_collection" "ngc_profile" {
   account_name        = azurerm_cosmosdb_account.ngc.name
   database_name       = azurerm_cosmosdb_mongo_database.ngc_profile.name
 
-  default_ttl_seconds = "-1"
+  default_ttl_seconds = "0"
   shard_key           = "_id"
 }
